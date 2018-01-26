@@ -1,0 +1,25 @@
+{
+  "name": "mic_hat_node",
+  "version": "1.0.0",
+  "description": "A Node transposition of https://github.com/respeaker/mic_hat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giano/mic_hat_node.git"
+  },
+  "author": "Stefano Valicchia",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/giano/mic_hat_node/issues"
+  },
+  "homepage": "https://github.com/giano/mic_hat_node#readme",
+  "dependencies": {
+    "apa102-spi": "0.0.3",
+    "google-assistant-node": "0.0.12",
+    "google-auth-library": "^1.1.0",
+    "node-gyp": "^3.6.2"
+  }
+}

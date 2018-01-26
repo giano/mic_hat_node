@@ -1,25 +1,36 @@
 {
-  "name": "mic_hat_node",
-  "version": "1.0.0",
-  "description": "A Node transposition of https://github.com/respeaker/mic_hat",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/giano/mic_hat_node.git"
-  },
-  "author": "Stefano Valicchia",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/giano/mic_hat_node/issues"
-  },
-  "homepage": "https://github.com/giano/mic_hat_node#readme",
-  "dependencies": {
-    "apa102-spi": "0.0.3",
-    "google-assistant-node": "0.0.12",
-    "google-auth-library": "^1.1.0",
-    "node-gyp": "^3.6.2"
-  }
+    "name": "mic_hat_node",
+    "version": "1.0.0",
+    "description": "A Node transposition of https://github.com/respeaker/mic_hat",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./client_secret.json,./tokens.json,./README.md,./LICENSE,./node_modules,./.babelrc,./package.json,./package-lock.json,./npm-debug.log --copy-files",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prestart": "npm run build",
+        "start": "node dist/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/giano/mic_hat_node.git"
+    },
+    "author": "Stefano Valicchia",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/giano/mic_hat_node/issues"
+    },
+    "homepage": "https://github.com/giano/mic_hat_node#readme",
+    "dependencies": {
+        "apa102-spi": "0.0.3",
+        "app-root-path": "^2.0.1",
+        "bluebird": "^3.5.1",
+        "google-assistant": "^0.2.2",
+        "lodash": "^4.17.4",
+        "node-gyp": "^3.6.2",
+        "tinycolor": "0.0.1"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "rimraf": "^2.6.2"
+    }
 }

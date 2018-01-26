@@ -1,0 +1,17 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "await": true
+        }
+    },
+    "root": true,
+    "env": {
+        "node": true
+    },
+    "extends": ["eslint:recommended"],
+    "rules": {
+        "no-console": 0
+    }
+}

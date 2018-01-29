@@ -26,6 +26,8 @@
         "google-assistant": "^0.2.2",
         "lodash": "^4.17.4",
         "node-gyp": "^3.6.2",
+        "node-record-lpcm16": "^0.3.0",
+        "speaker": "^0.4.0",
         "tinycolor": "0.0.1"
     },
     "devDependencies": {
